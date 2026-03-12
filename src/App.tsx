@@ -6,6 +6,7 @@ import StaffView from './features/staff/StaffView.js';
 import PersonalView from './features/staff/components/PersonalView.js';
 import { DashboardView } from './features/dashboard/DashboardView.js';
 import { GeoMapView } from './features/geo-map/GeoMapView.js';
+import DashboardAIInsights from './features/ai-insights/components/DashboardAIInsights.js';
 import 'leaflet/dist/leaflet.css';
 
 const App: React.FC = () => {
@@ -18,6 +19,7 @@ const App: React.FC = () => {
           <Route path="/staff" element={<StaffView />} />
           <Route path="/personal" element={<PersonalView />} />
           <Route path="/map" element={<GeoMapView />} />
+          <Route path="/ai-insights" element={<DashboardAIInsights systemContext="Sistema global" />} />
         </Routes>
       </div>
     </MainLayout>
