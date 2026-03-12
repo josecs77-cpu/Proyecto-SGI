@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import MainLayout from './shared/layouts/MainLayout.js';
 import SchoolsView from './features/schools/SchoolsView.js';
+import StaffView from './features/staff/StaffView.js';
 import 'leaflet/dist/leaflet.css';
 
 const App: React.FC = () => {
@@ -16,6 +17,7 @@ const App: React.FC = () => {
             </div>
           } />
           <Route path="/schools" element={<SchoolsView />} />
+          <Route path="/staff" element={<StaffView />} />
         </Routes>
       </div>
     </MainLayout>
