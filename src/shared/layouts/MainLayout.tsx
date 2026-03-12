@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { LayoutDashboard, Users, School, BrainCircuit, Settings, Map as MapIcon } from 'lucide-react';
+import { LayoutDashboard, Users, School, BrainCircuit, Settings, Map as MapIcon, Layers } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 
 interface MainLayoutProps {
@@ -11,6 +11,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
     { icon: LayoutDashboard, label: 'Dashboard', to: '/' },
     { icon: School, label: 'Planteles', to: '/schools' },
     { icon: Users, label: 'Personal', to: '/staff' },
+    { icon: Layers, label: 'Cuadratura', to: '/cuadratura' },
     { icon: MapIcon, label: 'GeoMapa', to: '/map' },
     { icon: BrainCircuit, label: 'Jules AI', to: '/ai-insights' },
     { icon: Settings, label: 'Configuración', to: '/settings' },
