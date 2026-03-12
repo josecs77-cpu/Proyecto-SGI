@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { LayoutDashboard, Users, School, BrainCircuit, Settings } from 'lucide-react';
+import { LayoutDashboard, Users, School, BrainCircuit, Settings, Map as MapIcon } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 
 interface MainLayoutProps {
@@ -11,6 +11,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
     { icon: LayoutDashboard, label: 'Dashboard', to: '/' },
     { icon: School, label: 'Planteles', to: '/schools' },
     { icon: Users, label: 'Personal', to: '/staff' },
+    { icon: MapIcon, label: 'GeoMapa', to: '/map' },
     { icon: BrainCircuit, label: 'Jules AI', to: '/ai-insights' },
     { icon: Settings, label: 'Configuración', to: '/settings' },
   ];
@@ -18,8 +19,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
     <div className="flex h-screen w-full bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
       {/* Sidebar */}
-      <aside className="w-64 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 flex flex-col transition-all duration-300">
-        <div className="h-16 flex items-center justify-center border-b border-gray-200 dark:border-gray-700">
+      <aside className="w-64 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 flex flex-col transition-all duration-300 z-50">
+        <div className="h-16 flex items-center justify-center border-b border-gray-200 dark:border-gray-700 shrink-0">
           <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
             SGI V9
           </h1>
@@ -47,7 +48,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
           </ul>
         </nav>
 
-        <div className="p-4 border-t border-gray-200 dark:border-gray-700">
+        <div className="p-4 border-t border-gray-200 dark:border-gray-700 shrink-0">
           <div className="flex items-center gap-3">
             <div className="h-8 w-8 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-blue-700 dark:text-blue-400 font-semibold">
               AD
@@ -63,16 +64,13 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
       {/* Main Content */}
       <main className="flex-1 overflow-hidden flex flex-col">
         {/* Top Header */}
-        <header className="h-16 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 flex items-center px-6 justify-between">
+        <header className="h-16 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 flex items-center px-6 justify-between shrink-0 z-40">
           <h2 className="text-lg font-semibold">Sistema de Gestión Integral</h2>
-          {/* Header controls can go here */}
         </header>
 
         {/* Content Area */}
-        <div className="flex-1 overflow-auto bg-gray-50 dark:bg-gray-900">
-          <div className="mx-auto max-w-7xl w-full">
-            {children}
-          </div>
+        <div className="flex-1 overflow-auto bg-gray-50 dark:bg-gray-900 relative">
+          {children}
         </div>
       </main>
     </div>

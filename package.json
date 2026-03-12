@@ -18,6 +18,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^5.0.0",
+    "framer-motion": "^12.36.0",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.474.0",
     "react": "^19.0.0",

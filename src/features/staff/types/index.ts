@@ -52,3 +52,18 @@ export interface RacRegistro {
   requiereMedicamento?: string;
   discapacidad?: string;
 }
+
+export interface PersonalRegistro {
+  id: string;
+  plantelId: string;
+  cargo: string;
+  racFemenino: number;
+  racMasculino: number;
+  asistentesFemenino: number;
+  asistentesMasculino: number;
+  fechaCarga: string;
+  responsableNombre: string;
+  responsableCi: string;
+  responsableCargo: string;
+  responsableTelefono: string;
+}
