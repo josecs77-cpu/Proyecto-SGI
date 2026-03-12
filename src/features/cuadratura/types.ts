@@ -90,3 +90,11 @@ export interface CuadraturaRegistro {
     responsableCargo: string;
     responsableTelefono: string;
 }
+
+export interface PersonalRegistro {
+    id: string;
+    plantelId: string;
+    fechaAsistencia: string;
+    asistio: boolean;
+    observacion?: string;
+}

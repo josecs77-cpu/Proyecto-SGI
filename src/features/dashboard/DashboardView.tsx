@@ -1,7 +1,22 @@
 import React from 'react';
-import DashboardAIInsights from '../ai-insights/components/DashboardAIInsights';
+import AvancesManager from './components/AvancesManager';
+import ConsolidacionEstatal from './components/ConsolidacionEstatal';
 
 export const DashboardView: React.FC = () => {
+  // We mock the missing parts for this view integration since the store was not defined globally in this context
+  const planteles: any[] = [];
+  const rac: any[] = [];
+  const matricula: any[] = [];
+  const personal: any[] = [];
+  const fede: any[] = [];
+  const cnae: any[] = [];
+
+  const currentUser = {
+    id: "user-1",
+    role: "ADMINISTRADOR",
+    estadoAsignado: "MIRANDA"
+  };
+
   return (
     <div className="space-y-6">
       <div>
@@ -11,8 +26,28 @@ export const DashboardView: React.FC = () => {
         </p>
       </div>
 
-      <div className="mt-8">
-        <DashboardAIInsights systemContext="Planteles registrados: 15. Docentes activos: 120. Escuelas con déficit de internet: 60%." />
+      <div className="mt-8 space-y-12">
+        <AvancesManager
+            planteles={planteles as any}
+            rac={rac as any}
+            matricula={matricula}
+            personal={personal}
+            currentUser={currentUser as any}
+            systemState="Sistema Activo"
+            aiEnabled={true}
+        />
+
+        <div className="border-t-4 border-dashed border-slate-200 my-10"></div>
+
+        <ConsolidacionEstatal
+            planteles={planteles as any}
+            rac={rac as any}
+            matricula={matricula}
+            fede={fede}
+            cnae={cnae}
+            currentUser={currentUser as any}
+            systemState="Sistema Activo"
+        />
       </div>
     </div>
   );
