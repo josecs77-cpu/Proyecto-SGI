@@ -1,3 +1,8 @@
 node_modules/
 dist/
 .env
+fix_ts_errors*.py
+fix_app_tsx*.py
+test_frontend.py
+*.png
+backend.log

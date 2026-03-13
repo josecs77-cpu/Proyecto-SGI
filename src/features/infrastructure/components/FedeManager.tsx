@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Plantel, FedeRegistro } from '../../../core/types';
-import { CONDICION_BIEN, GEOGRAFIA_VENEZUELA, TIPOS_ESTRUCTURA, ESTADO_INFRAESTRUCTURA, SERVICIOS_AGUA, SERVICIOS_ELECTRICIDAD, SERVICIOS_AGUAS_SERVIDAS, SERVICIOS_GAS, ESTATUS_SOLICITUD, ESTATUS_OBRA, UTENSILIOS_COCINA, ARTEFACTOS_ELECTRICOS, TIPOS_ALIMENTO, CONDICION_USO } from '../../../core/constants';
-import { Hammer, Save, AlertCircle, HardHat, Droplets, PaintRoller, Armchair, ClipboardCheck, Search, Construction, FileText, History, Edit, Trash2, X, MapPin } from 'lucide-react';
+import { GEOGRAFIA_VENEZUELA, SERVICIOS_AGUA, SERVICIOS_ELECTRICIDAD, SERVICIOS_AGUAS_SERVIDAS, SERVICIOS_GAS, TIPOS_ESTRUCTURA, ESTADO_INFRAESTRUCTURA } from '../../../core/constants';
+import { Hammer, Save, AlertCircle, HardHat, Droplets, PaintRoller, ClipboardCheck, Search, Construction, History, Edit, Trash2, X } from 'lucide-react';
 
 const FedeManager: React.FC<{ planteles: Plantel[], fedeList: FedeRegistro[], onSaveFede: (r: FedeRegistro) => void, onDeleteFede: (id: string) => void, initialPlantelId?: string }> = ({ planteles, initialPlantelId, fedeList, onSaveFede, onDeleteFede }) => {
   const [selectedEstado, setSelectedEstado] = useState<string>('');
@@ -44,7 +44,7 @@ const FedeManager: React.FC<{ planteles: Plantel[], fedeList: FedeRegistro[], on
     );
   }, [planteles, selectedEstado, selectedMunicipio, searchTerm]);
 
-  const selectedPlantel = planteles.find(p => p.id === selectedPlantelId);
+
   const plantelHistory = fedeList.filter(f => f.plantelId === selectedPlantelId).sort((a,b) => new Date(b.fechaCarga).getTime() - new Date(a.fechaCarga).getTime());
 
   const handleEditRecord = (reg: FedeRegistro) => {

@@ -2,13 +2,13 @@
 import React, { useState, useRef, useEffect } from 'react';
 import {
     RefreshCw, Save, FileSpreadsheet,
-    UserCog, ChefHat, Brush, Shield,
+
     Bomb, FileDown, Plus, Settings2, FileUp,
-    ImageIcon, Zap, FileText, SearchCode, History, UserCheck, X,
-    Wifi, Globe, Activity, LayoutGrid, Terminal, Database,
-    Calculator, BrainCircuit, ShieldCheck, Download, MessageSquare
+    ImageIcon, Zap, History, UserCheck,
+    Wifi, Terminal, Database,
+    Calculator, Download,
 } from 'lucide-react';
-import { User, Plantel, MatriculaRegistro, PersonalRegistro, RacRegistro, CnaeRegistro, BienesRegistro, FundabitRegistro, FedeRegistro, CuadraturaRegistro, RecursoRegistro, AsistenciaDiariaRegistro, RendimientoRegistro, PersonnelCriteria, Dependencia, NivelEducativo, Turno, ModalidadEducativa, UserRole } from '../../../core/types';
+import { User, Plantel, PersonnelCriteria, RacRegistro, Dependencia, Turno } from '../../../core/types';
 import * as XLSX from 'xlsx';
 
 interface MantenimientoManagerProps {
@@ -30,7 +30,7 @@ interface MantenimientoManagerProps {
 }
 
 const MantenimientoManager: React.FC<MantenimientoManagerProps> = ({
-    onRefreshData, onLogoChange, onBannerChange, onCriteriaChange, onAiEnabledChange, onChatbotChange, onSelfRegisterChange, onStateNameChange, onBulkImport, onPurgeAsistencia, onHardReset, currentUser, serverUrl, isOnline, allData
+    onRefreshData, onLogoChange, onBannerChange, onCriteriaChange, onAiEnabledChange, onChatbotChange, onSelfRegisterChange, onStateNameChange, onBulkImport, onPurgeAsistencia, onHardReset, serverUrl, isOnline, allData
 }) => {
     const [activeTab, setActiveTab] = useState<'general' | 'red' | 'criterios' | 'carga_masiva' | 'avanzado'>('general');
     const [isProcessing, setIsProcessing] = useState(false);
@@ -80,7 +80,7 @@ const MantenimientoManager: React.FC<MantenimientoManagerProps> = ({
         onSelfRegisterChange?.(enabled);
     };
 
-    const normalize = (val: any) => String(val || '').trim().toUpperCase();
+    // const normalize = (val: any) => String(val || '').trim().toUpperCase();
 
     const cleanValue = (val: any): string => {
         if (!val) return '';

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Plantel, BienesRegistro, BienItem, FirmaPerson } from '../../../core/types';
-import { CONDICION_BIEN, GEOGRAFIA_VENEZUELA, TIPOS_ESTRUCTURA, ESTADO_INFRAESTRUCTURA, SERVICIOS_AGUA, SERVICIOS_ELECTRICIDAD, SERVICIOS_AGUAS_SERVIDAS, SERVICIOS_GAS, ESTATUS_SOLICITUD, ESTATUS_OBRA, UTENSILIOS_COCINA, ARTEFACTOS_ELECTRICOS, TIPOS_ALIMENTO, CONDICION_USO } from '../../../core/constants';
-import { Monitor, Save, AlertCircle, Plus, Trash2, PackageOpen, FileSignature, Search, History, Edit, X, MapPin } from 'lucide-react';
+import { GEOGRAFIA_VENEZUELA } from '../../../core/constants';
+import { Monitor, Save, AlertCircle, Plus, Trash2, PackageOpen, FileSignature, Search, History, Edit, X } from 'lucide-react';
 
 interface BienesManagerProps {
   planteles: Plantel[];

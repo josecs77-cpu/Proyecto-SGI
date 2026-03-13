@@ -10,6 +10,13 @@ import DashboardAIInsights from './features/ai-insights/components/DashboardAIIn
 import CuadraturaView from './features/cuadratura/components/CuadraturaView.js';
 import EnrollmentView from './features/enrollment/EnrollmentView.js';
 import 'leaflet/dist/leaflet.css';
+import BienesManager from './features/infrastructure/components/BienesManager.js';
+import CnaeManager from './features/infrastructure/components/CnaeManager.js';
+import FedeManager from './features/infrastructure/components/FedeManager.js';
+import FundabitManager from './features/infrastructure/components/FundabitManager.js';
+import MantenimientoManager from './features/system/components/MantenimientoManager.js';
+import UsuariosManager from './features/system/components/UsuariosManager.js';
+
 
 const App: React.FC = () => {
   return (
@@ -24,7 +31,14 @@ const App: React.FC = () => {
           <Route path="/ai-insights" element={<DashboardAIInsights systemContext="Sistema global" />} />
           <Route path="/cuadratura" element={<CuadraturaView />} />
           <Route path="/matricula" element={<EnrollmentView />} />
-        </Routes>
+
+          <Route path="/bienes" element={<BienesManager planteles={[]} bienesList={[]} onSaveBienes={async () => {}} onDeleteBienes={() => {}} />} />
+          <Route path="/cnae" element={<CnaeManager planteles={[]} cnaeList={[]} onSaveCnae={async () => {}} onDeleteCnae={() => {}} />} />
+          <Route path="/fede" element={<FedeManager planteles={[]} fedeList={[]} onSaveFede={async () => {}} onDeleteFede={() => {}} />} />
+          <Route path="/fundabit" element={<FundabitManager planteles={[]} fundabitList={[]} onSaveFundabit={async () => {}} onDeleteFundabit={() => {}} />} />
+          <Route path="/mantenimiento" element={<MantenimientoManager onRefreshData={async () => {}} serverUrl={''} isOnline={true} allData={{}} onLogoChange={async () => {}} onBannerChange={async () => {}} onCriteriaChange={async () => {}} onAiEnabledChange={async () => {}} onChatbotChange={async () => {}} onSelfRegisterChange={async () => {}} onStateNameChange={async () => {}} onBulkImport={async () => {}} onPurgeAsistencia={async () => {}} onHardReset={async () => {}} />} />
+          <Route path="/usuarios" element={<UsuariosManager currentUser={{id: 1, role: 'ADMIN'} as any} users={[]} planteles={[]} onSaveUser={async () => {}} onDeleteUser={() => {}} />} />
+</Routes>
       </div>
     </MainLayout>
   );

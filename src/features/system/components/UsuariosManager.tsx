@@ -1,11 +1,11 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { User, Plantel, Plantel, MatriculaRegistro, PersonalRegistro, RacRegistro, CnaeRegistro, BienesRegistro, FundabitRegistro, FedeRegistro, CuadraturaRegistro, RecursoRegistro, AsistenciaDiariaRegistro, RendimientoRegistro, PersonnelCriteria, Dependencia, NivelEducativo, Turno, ModalidadEducativa, UserRole } from '../../../core/types';
+import { User, UserRole, Plantel } from '../../../core/types';
 import {
   Users, UserPlus, Search, Edit, Trash2, X, Building2, School,
-  Upload, FileSpreadsheet, Download, UserCheck, UserX, RefreshCw,
-  Plus, Key, Save, ShieldCheck, MapPin, Group, Check, AlertCircle, Globe, BrainCircuit, Lock
-} from 'lucide-react';
+  FileSpreadsheet, Download, UserCog,
+  Plus, Key, Save, Shield, Group, Globe, BrainCircuit, Lock
+, MapPin } from 'lucide-react';
 import { GEOGRAFIA_VENEZUELA, MUNICIPIOS_ANZOATEGUI } from '../../../core/constants';
 import * as XLSX from 'xlsx';
 
@@ -17,7 +17,7 @@ interface UsuariosManagerProps {
   onDeleteUser: (id: string) => void;
 }
 
-const UsuariosManager: React.FC<UsuariosManagerProps> = ({ currentUser, users, planteles, onSaveUser, onDeleteUser }) => {
+const UsuariosManager: React.FC<UsuariosManagerProps> = ({ users, planteles, onSaveUser, onDeleteUser }) => {
   const [viewMode, setViewMode] = useState<'list' | 'form'>('list');
   const [editingUser, setEditingUser] = useState<Partial<User>>({});
   const [searchTerm, setSearchTerm] = useState('');
@@ -242,7 +242,7 @@ const UsuariosManager: React.FC<UsuariosManagerProps> = ({ currentUser, users, p
                               <div className="p-6 flex-1">
                                   <div className="flex justify-between items-start mb-4">
                                       <div className={`p-2 rounded-xl bg-gradient-to-br ${getRoleColor(user.role)} text-white shadow-md`}>
-                                          <ShieldCheck size={20} />
+                                          <Shield size={20} />
                                       </div>
                                       <span className={`text-[9px] font-black px-3 py-1 rounded-full border ${user.isActive ? 'bg-emerald-50 text-emerald-700 border-emerald-100' : 'bg-rose-50 text-rose-700 border-rose-100'}`}>
                                           {user.isActive ? 'ACTIVO' : 'SUSPENDIDO'}
@@ -256,7 +256,7 @@ const UsuariosManager: React.FC<UsuariosManagerProps> = ({ currentUser, users, p
                                           <Building2 size={12}/> {user.cargo}
                                       </div>
                                       <div className="flex items-center gap-2 text-[10px] font-black text-indigo-700 uppercase">
-                                          <ShieldCheck size={12}/> ROL: {user.role}
+                                          <Shield size={12}/> ROL: {user.role}
                                       </div>
                                       <div className="flex items-center gap-2 text-[10px] text-slate-400 font-bold uppercase">
                                           <MapPin size={12}/> {user.role === 'ADMINISTRADOR' || user.role === 'GEOLOCALIZADOR' ? `EDO: ${user.estadoAsignado}` : user.role === 'MUNICIPAL' ? user.municipioAsignado : `${user.plantelesAsignados?.length || 0} Planteles`}
@@ -272,7 +272,7 @@ const UsuariosManager: React.FC<UsuariosManagerProps> = ({ currentUser, users, p
                                   <div className="flex gap-2">
                                       <button onClick={() => { setEditingUser(user); setViewMode('form'); }} className="p-2 text-indigo-600 hover:bg-white rounded-xl border border-transparent hover:border-indigo-100 transition-all shadow-sm" title="Editar"><Edit size={16}/></button>
                                       <button onClick={() => toggleStatus(user)} className={`p-2 rounded-xl border border-transparent transition-all shadow-sm ${user.isActive ? 'text-rose-500 hover:bg-rose-50 hover:border-rose-100' : 'text-emerald-500 hover:bg-emerald-50 hover:border-emerald-100'}`} title={user.isActive ? "Suspender" : "Activar"}>
-                                          {user.isActive ? <UserX size={16}/> : <UserCheck size={16}/>}
+                                          {user.isActive ? <UserCog size={16}/> : <UserCog size={16}/>}
                                       </button>
                                   </div>
                                   <button onClick={() => { if(confirm('¿ELIMINAR ESTE USUARIO PERMANENTEMENTE?')) onDeleteUser(user.id); }} className="p-2 text-slate-400 hover:text-rose-600 hover:bg-white rounded-xl transition-all"><Trash2 size={16}/></button>

@@ -13,9 +13,14 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
     { icon: GraduationCap, label: 'Matrícula', to: '/matricula' },
     { icon: Users, label: 'Personal', to: '/staff' },
     { icon: Layers, label: 'Cuadratura', to: '/cuadratura' },
+    { icon: School, label: 'Bienes Nacionales', to: '/bienes' },
+    { icon: School, label: 'CNAE', to: '/cnae' },
+    { icon: School, label: 'FEDE', to: '/fede' },
+    { icon: School, label: 'Fundabit', to: '/fundabit' },
+    { icon: Settings, label: 'Mantenimiento', to: '/mantenimiento' },
+    { icon: Users, label: 'Usuarios', to: '/usuarios' },
     { icon: MapIcon, label: 'GeoMapa', to: '/map' },
     { icon: BrainCircuit, label: 'Jules AI', to: '/ai-insights' },
-    { icon: Settings, label: 'Configuración', to: '/settings' },
   ];
 
   return (

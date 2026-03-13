@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Plantel, CnaeRegistro, InventarioItem, AlimentoItem } from '../../../core/types';
-import { CONDICION_BIEN, GEOGRAFIA_VENEZUELA, TIPOS_ESTRUCTURA, ESTADO_INFRAESTRUCTURA, SERVICIOS_AGUA, SERVICIOS_ELECTRICIDAD, SERVICIOS_AGUAS_SERVIDAS, SERVICIOS_GAS, ESTATUS_SOLICITUD, ESTATUS_OBRA, UTENSILIOS_COCINA, ARTEFACTOS_ELECTRICOS, TIPOS_ALIMENTO, CONDICION_USO } from '../../../core/constants';
-import { ChefHat, Save, AlertCircle, UtensilsCrossed, Refrigerator, Beef, Truck, Plus, Trash2, ClipboardList, History, Edit, X, MapPin, Search } from 'lucide-react';
+import { GEOGRAFIA_VENEZUELA, UTENSILIOS_COCINA, ARTEFACTOS_ELECTRICOS, CONDICION_USO, TIPOS_ALIMENTO } from '../../../core/constants';
+import { ChefHat, Save, AlertCircle, UtensilsCrossed, Refrigerator, Beef, Truck, Plus, Trash2, ClipboardList, History, Edit, X, Search } from 'lucide-react';
 
 const CnaeManager: React.FC<{ planteles: Plantel[], initialPlantelId?: string, cnaeList: CnaeRegistro[], onSaveCnae: (r: CnaeRegistro) => void, onDeleteCnae: (id: string) => void }> = ({ planteles, initialPlantelId, cnaeList, onSaveCnae, onDeleteCnae }) => {
   const [selectedEstado, setSelectedEstado] = useState<string>('');

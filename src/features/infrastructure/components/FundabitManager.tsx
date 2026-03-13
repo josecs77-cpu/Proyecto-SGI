@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Plantel, FundabitRegistro, TutorCbit } from '../../../core/types';
-import { PcCase, Save, AlertCircle, Monitor, Users, History, Edit, Trash2, X, MapPin, Search } from 'lucide-react';
-import { CONDICION_BIEN, GEOGRAFIA_VENEZUELA, TIPOS_ESTRUCTURA, ESTADO_INFRAESTRUCTURA, SERVICIOS_AGUA, SERVICIOS_ELECTRICIDAD, SERVICIOS_AGUAS_SERVIDAS, SERVICIOS_GAS, ESTATUS_SOLICITUD, ESTATUS_OBRA, UTENSILIOS_COCINA, ARTEFACTOS_ELECTRICOS, TIPOS_ALIMENTO, CONDICION_USO } from '../../../core/constants';
+import { PcCase, Save, AlertCircle, Monitor, Users, History, Edit, Trash2, X, Search } from 'lucide-react';
+import { GEOGRAFIA_VENEZUELA } from '../../../core/constants';
 
 interface FundabitManagerProps {
   planteles: Plantel[];
