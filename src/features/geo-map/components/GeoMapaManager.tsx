@@ -379,7 +379,7 @@ export const GeoMapaManager: React.FC<GeoMapaManagerProps> = ({
                 </div>
               </div>
 
-              <div className="flex-1 overflow-y-auto custom-scrollbar p-6 sm:p-8 space-y-8 pb-24 -mt-6 bg-white rounded-t-[40px] relative z-20">
+              <div className="flex-1  custom-scrollbar p-6 sm:p-8 space-y-8 pb-24 -mt-6 bg-white rounded-t-[40px] relative z-20">
 
                 {/* UBICACION Y CODIGOS */}
                 <div className="space-y-4">

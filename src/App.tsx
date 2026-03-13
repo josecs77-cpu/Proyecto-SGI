@@ -21,7 +21,7 @@ import UsuariosManager from './features/system/components/UsuariosManager.js';
 const App: React.FC = () => {
   return (
     <MainLayout>
-      <div className="h-full p-4 md:p-8 overflow-hidden">
+      <div className="h-full w-full">
         <Routes>
           <Route path="/" element={<DashboardView />} />
           <Route path="/schools" element={<SchoolsView />} />
