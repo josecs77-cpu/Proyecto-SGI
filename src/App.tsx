@@ -32,12 +32,12 @@ const App: React.FC = () => {
           <Route path="/cuadratura" element={<CuadraturaView />} />
           <Route path="/matricula" element={<EnrollmentView />} />
 
-          <Route path="/bienes" element={<BienesManager planteles={[]} bienesList={[]} onSaveBienes={async () => {} as any} onDeleteBienes={() => {}} />} />
-          <Route path="/cnae" element={<CnaeManager planteles={[]} cnaeList={[]} onSaveCnae={async () => {} as any} onDeleteCnae={() => {}} />} />
-          <Route path="/fede" element={<FedeManager planteles={[]} fedeList={[]} onSaveFede={async () => {} as any} onDeleteFede={() => {}} />} />
-          <Route path="/fundabit" element={<FundabitManager planteles={[]} fundabitList={[]} onSaveFundabit={async () => {} as any} onDeleteFundabit={() => {}} />} />
-          <Route path="/mantenimiento" element={<MantenimientoManager onRefreshData={async () => {} as any} serverUrl={''} isOnline={true} allData={{}} onLogoChange={async () => {} as any} onBannerChange={async () => {} as any} onCriteriaChange={async () => {} as any} onAiEnabledChange={async () => {} as any} onChatbotChange={async () => {} as any} onSelfRegisterChange={async () => {} as any} onStateNameChange={async () => {} as any} onBulkImport={async () => {} as any} onPurgeAsistencia={async () => {} as any} onHardReset={async () => {} as any} />} />
-          <Route path="/usuarios" element={<UsuariosManager currentUser={{id: 1, role: 'ADMIN'} as any} users={[]} planteles={[]} onSaveUser={async () => {} as any} onDeleteUser={() => {}} />} />
+          <Route path="/bienes" element={<BienesManager planteles={[]} bienesList={[]} onSaveBienes={async (k: any, d: any) => {}} onDeleteBienes={() => {}} />} />
+          <Route path="/cnae" element={<CnaeManager planteles={[]} cnaeList={[]} onSaveCnae={async (k: any, d: any) => {}} onDeleteCnae={() => {}} />} />
+          <Route path="/fede" element={<FedeManager planteles={[]} fedeList={[]} onSaveFede={async (k: any, d: any) => {}} onDeleteFede={() => {}} />} />
+          <Route path="/fundabit" element={<FundabitManager planteles={[]} fundabitList={[]} onSaveFundabit={async (k: any, d: any) => {}} onDeleteFundabit={() => {}} />} />
+          <Route path="/mantenimiento" element={<MantenimientoManager onRefreshData={async () => {}} serverUrl={''} isOnline={true} allData={{}} onLogoChange={async (d: any) => {}} onBannerChange={async (d: any) => {}} onCriteriaChange={async (d: any) => {}} onAiEnabledChange={async (d: any) => {}} onChatbotChange={async (d: any) => {}} onSelfRegisterChange={async (d: any) => {}} onStateNameChange={async (d: any) => {}} onBulkImport={async (d: any) => {}} onPurgeAsistencia={async () => {}} onHardReset={async () => {}} />} />
+          <Route path="/usuarios" element={<UsuariosManager currentUser={{id: 1, role: 'ADMIN'} as any} users={[]} planteles={[]} onSaveUser={async (k: any, d: any) => {}} onDeleteUser={() => {}} />} />
 </Routes>
       </div>
     </MainLayout>
