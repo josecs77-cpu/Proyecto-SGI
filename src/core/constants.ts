@@ -119,7 +119,7 @@ export const GEOGRAFIA_VENEZUELA: Record<string, Record<string, string[]>> = {
     "MAROA": ["MAROA", "VICTORINO", "COMUNIDAD"],
     "RIO NEGRO": ["SAN CARLOS DE RIO NEGRO", "COCUY", "SOLANO"]
   },
-  "ANZOATEGUI": {
+    "ANZOATEGUI": {
     "ANACO": ["ANACO", "SAN JOAQUIN"],
     "ARAGUA": ["ARAGUA DE BARCELONA", "CACHIPO"],
     "FERNANDO DE PEÑALVER": ["PUERTO PIRITU", "SAN MIGUEL", "SUCRE"],

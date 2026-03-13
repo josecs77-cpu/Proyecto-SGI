@@ -233,7 +233,7 @@ export const GeoMapaManager: React.FC<GeoMapaManagerProps> = ({
   }, [selectedPlantel, matricula, rac]);
 
   return (
-    <div className={`flex flex-col gap-6 relative transition-all duration-500 ${isFullScreen ? 'fixed inset-0 z-[200] bg-slate-100 w-screen h-screen' : 'h-[calc(100vh-160px)]'}`}>
+    <div className={`flex flex-col gap-6 relative transition-all duration-500 h-full ${isFullScreen ? 'fixed inset-0 z-[200] bg-slate-100 w-screen h-screen' : 'flex-1'}`}>
 
       <div className={`bg-white p-4 sm:p-5 shadow-xl border border-slate-200 flex flex-col xl:flex-row justify-between items-center shrink-0 gap-4 transition-all duration-500 z-[500] ${isFullScreen ? 'm-4 rounded-[30px]' : 'rounded-[40px]'}`}>
         <div className="flex items-center gap-4 w-full md:w-auto">
@@ -277,7 +277,7 @@ export const GeoMapaManager: React.FC<GeoMapaManagerProps> = ({
         </div>
       </div>
 
-      <div className={`flex-1 relative overflow-hidden transition-all duration-500 ${isFullScreen ? 'w-full h-full' : 'bg-white rounded-[40px] shadow-2xl border-4 border-white'}`}>
+      <div className={`flex-1 relative overflow-hidden transition-all duration-500 ${isFullScreen ? 'w-full h-full' : 'bg-white rounded-[40px] shadow-2xl border-4 border-white h-full'}`}>
         <div ref={mapRef} className="h-full w-full z-0"></div>
 
         <div className="absolute top-4 sm:top-6 left-1/2 -translate-x-1/2 z-[600] w-[90%] sm:w-full max-w-lg px-0 sm:px-4">

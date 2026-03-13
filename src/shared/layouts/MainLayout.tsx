@@ -160,7 +160,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         {/* Content Area - Changed padding to ensure maps/tables can use full space if needed,
             or inner components can add padding */}
         <div className="flex-1 overflow-x-hidden overflow-y-auto bg-slate-50 dark:bg-slate-900 relative">
-          <div className="h-full min-h-min p-2 sm:p-4 lg:p-6 pb-20">
+          <div className="h-full min-h-full p-2 sm:p-4 lg:p-6 pb-20 flex flex-col">
             {children}
           </div>
         </div>

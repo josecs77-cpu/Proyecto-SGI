@@ -17,7 +17,6 @@ import FundabitManager from './features/infrastructure/components/FundabitManage
 import MantenimientoManager from './features/system/components/MantenimientoManager.js';
 import UsuariosManager from './features/system/components/UsuariosManager.js';
 
-
 const App: React.FC = () => {
   return (
     <MainLayout>
@@ -32,13 +31,13 @@ const App: React.FC = () => {
           <Route path="/cuadratura" element={<CuadraturaView />} />
           <Route path="/matricula" element={<EnrollmentView />} />
 
-          <Route path="/bienes" element={<BienesManager planteles={[]} bienesList={[]} onSaveBienes={async (k: any, d: any) => {}} onDeleteBienes={() => {}} />} />
-          <Route path="/cnae" element={<CnaeManager planteles={[]} cnaeList={[]} onSaveCnae={async (k: any, d: any) => {}} onDeleteCnae={() => {}} />} />
-          <Route path="/fede" element={<FedeManager planteles={[]} fedeList={[]} onSaveFede={async (k: any, d: any) => {}} onDeleteFede={() => {}} />} />
-          <Route path="/fundabit" element={<FundabitManager planteles={[]} fundabitList={[]} onSaveFundabit={async (k: any, d: any) => {}} onDeleteFundabit={() => {}} />} />
-          <Route path="/mantenimiento" element={<MantenimientoManager onRefreshData={async () => {}} serverUrl={''} isOnline={true} allData={{}} onLogoChange={async (d: any) => {}} onBannerChange={async (d: any) => {}} onCriteriaChange={async (d: any) => {}} onAiEnabledChange={async (d: any) => {}} onChatbotChange={async (d: any) => {}} onSelfRegisterChange={async (d: any) => {}} onStateNameChange={async (d: any) => {}} onBulkImport={async (d: any) => {}} onPurgeAsistencia={async () => {}} onHardReset={async () => {}} />} />
-          <Route path="/usuarios" element={<UsuariosManager currentUser={{id: 1, role: 'ADMIN'} as any} users={[]} planteles={[]} onSaveUser={async (k: any, d: any) => {}} onDeleteUser={() => {}} />} />
-</Routes>
+          <Route path="/bienes" element={<BienesManager planteles={[]} bienesList={[]} onSaveBienes={() => {}} onDeleteBienes={() => {}} />} />
+          <Route path="/cnae" element={<CnaeManager planteles={[]} cnaeList={[]} onSaveCnae={() => {}} onDeleteCnae={() => {}} />} />
+          <Route path="/fede" element={<FedeManager planteles={[]} fedeList={[]} onSaveFede={() => {}} onDeleteFede={() => {}} />} />
+          <Route path="/fundabit" element={<FundabitManager planteles={[]} fundabitList={[]} onSaveFundabit={() => {}} onDeleteFundabit={() => {}} />} />
+          <Route path="/mantenimiento" element={<MantenimientoManager onRefreshData={async () => {}} serverUrl={''} isOnline={true} allData={{}} onLogoChange={() => {}} onBannerChange={() => {}} onCriteriaChange={() => {}} onAiEnabledChange={() => {}} onChatbotChange={() => {}} onSelfRegisterChange={() => {}} onStateNameChange={() => {}} onBulkImport={async () => {}} onPurgeAsistencia={async () => {}} onHardReset={async () => {}} />} />
+          <Route path="/usuarios" element={<UsuariosManager currentUser={{id: 1, role: 'ADMIN'} as any} users={[]} planteles={[]} onSaveUser={() => {}} onDeleteUser={() => {}} />} />
+        </Routes>
       </div>
     </MainLayout>
   );

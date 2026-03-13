@@ -11,3 +11,60 @@ Port 5176 is in use, trying another one...
 
   ➜  Local:   http://localhost:5177/
   ➜  Network: use --host to expose
+2:38:14 PM [vite] .env changed, restarting server...
+2:38:16 PM [vite] server restarted.
+Error:   Failed to scan for dependencies from entries:
+  /app/index.html
+
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNo matching export in "src/features/infrastructure/components/BienesManager.tsx" for import "BienesManager"[0m
+
+    src/App.tsx:13:9:
+[37m      13 │ import { [32mBienesManager[37m } from './features/infrastructure/component...
+         ╵          [32m~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNo matching export in "src/features/infrastructure/components/CnaeManager.tsx" for import "CnaeManager"[0m
+
+    src/App.tsx:14:9:
+[37m      14 │ import { [32mCnaeManager[37m } from './features/infrastructure/components/...
+         ╵          [32m~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNo matching export in "src/features/infrastructure/components/FedeManager.tsx" for import "FedeManager"[0m
+
+    src/App.tsx:15:9:
+[37m      15 │ import { [32mFedeManager[37m } from './features/infrastructure/components/...
+         ╵          [32m~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNo matching export in "src/features/infrastructure/components/FundabitManager.tsx" for import "FundabitManager"[0m
+
+    src/App.tsx:16:9:
+[37m      16 │ import { [32mFundabitManager[37m } from './features/infrastructure/compone...
+         ╵          [32m~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNo matching export in "src/features/system/components/MantenimientoManager.tsx" for import "MantenimientoManager"[0m
+
+    src/App.tsx:17:9:
+[37m      17 │ import { [32mMantenimientoManager[37m } from './features/system/components...
+         ╵          [32m~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNo matching export in "src/features/system/components/UsuariosManager.tsx" for import "UsuariosManager"[0m
+
+    src/App.tsx:18:9:
+[37m      18 │ import { [32mUsuariosManager[37m } from './features/system/components/Usua...
+         ╵          [32m~~~~~~~~~~~~~~~[0m
+
+
+    at failureErrorWithLog (/app/node_modules/vite/node_modules/esbuild/lib/main.js:1467:15)
+    at /app/node_modules/vite/node_modules/esbuild/lib/main.js:926:25
+    at runOnEndCallbacks (/app/node_modules/vite/node_modules/esbuild/lib/main.js:1307:45)
+    at buildResponseToResult (/app/node_modules/vite/node_modules/esbuild/lib/main.js:924:7)
+    at /app/node_modules/vite/node_modules/esbuild/lib/main.js:936:9
+    at new Promise (<anonymous>)
+    at requestCallbacks.on-end (/app/node_modules/vite/node_modules/esbuild/lib/main.js:935:54)
+    at handleRequest (/app/node_modules/vite/node_modules/esbuild/lib/main.js:628:17)
+    at handleIncomingPacket (/app/node_modules/vite/node_modules/esbuild/lib/main.js:653:7)
+    at Socket.readFromStdout (/app/node_modules/vite/node_modules/esbuild/lib/main.js:581:7)
